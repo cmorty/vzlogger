@@ -70,6 +70,10 @@ if(NOT WIN32)
     set(CMAKE_C_FLAGS "${CFLAGS} -W -Wall -Wno-system-headers")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu99 -fkeep-inline-functions")
 
+    #Needed as MHD_create_response_from_data is depricated in libmicrohttpd
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
+
   endif (${CMAKE_CXX_COMPILER_ID} MATCHES "GNU")
 
   if (${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
