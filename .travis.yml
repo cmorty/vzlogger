@@ -17,7 +17,7 @@ before_install:
   - sudo apt-get install -y build-essential
   - sudo apt-get install -y wget
   - sudo apt-get install -y libtool
-  - sudo apt-get install -y devscripts # mk-build-deps
+  - sudo apt-get install -y devscripts equivs # mk-build-deps
 # -- get libsml --
   - git clone https://github.com/volkszaehler/libsml.git # or github.com/TheCount/libsml.git # or https://github.com/dailab/libsml.git
   - cd libsml 
