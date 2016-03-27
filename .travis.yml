@@ -21,13 +21,13 @@ before_install:
 # -- get libsml --
   - git clone https://github.com/volkszaehler/libsml.git # or github.com/TheCount/libsml.git # or https://github.com/dailab/libsml.git
   - cd libsml 
-  - sudo mk-build-deps --install debian/control
+  - sudo mk-build-deps --install debian/control -y
   - debuild -b -us -uc 
   - cd ..  
 # -- install libsml --
   - sudo dpkg -i  libsml1*.deb 
 # -- get builddependencies 
-  - sudo mk-build-deps --install debian/control  
+  - sudo mk-build-deps --install debian/control -y
 # -- install leptonica --
   - sudo apt-get install -y libpng-dev libtiff-dev
   - wget http://www.leptonica.org/source/leptonica-1.71.tar.gz
