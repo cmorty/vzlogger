@@ -12,7 +12,7 @@ IF (NOT WIN32)
   include(FindPkgConfig)
   if ( PKG_CONFIG_FOUND )
 
-     pkg_check_modules (PC_JSON json0>=0.11)
+     pkg_check_modules (PC_JSON json>=0.11)
 
      set(JSON_DEFINITIONS ${PC_JSON_CFLAGS_OTHER})
   endif(PKG_CONFIG_FOUND)
